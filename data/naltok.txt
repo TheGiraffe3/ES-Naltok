@@ -12,11 +12,32 @@ fleet "Xochira Interdictor"
 	government "Xochira"
 	names "xochira"
 	personality
-		hunting vindictive
-#	variant 40
-#		"Archerfish" 2
-#	variant 10
-#		"Archerfish" 3
+		hunting coward vindictive
+	variant 40
+		"Archerfish" 2
+	variant 10
+		"Archerfish" 3
+
+fleet "Small Xochira"
+	government "Xochira"
+	names "xochira"
+	personality
+		heroic
+	variant
+		"Moray"
+	variant
+		"Moray (Halt-Swarm)"
+
+fleet "Large Xochira"
+	government "Xochira"
+	names "xochira"
+	personality
+		heroic
+	variant
+		"Moray" 3
+	variant
+		"Moray"
+		"Moray (Halt-Swarm)" 2
 
 fleet "Small Naltok Merchant"
 	government "Naltok Merchant"
@@ -37,14 +58,16 @@ fleet "Ministry of Transport Logistics"
 	government "Telashki (Ministry of Transport)"
 	names "telashki transport"
 	personality pacifist coward
-#	variant 30
-#		"Conger" 5
-#	variant 20
-#		"Conger" 4
-#	variant 10
-#		"Conger" 6
-#	variant 3
-#		"Herring"
+	variant 30
+		"Conger (Ministry of Transport)" 5
+	variant 20
+		"Conger (Ministry of Transport)" 4
+	variant 10
+		"Conger (Ministry of Transport)" 6
+	variant 3
+		"Herring"
+	variant
+		"Herring (No Cargo)
 #	variant 2
 #		"Flounder"
 
@@ -53,7 +76,7 @@ fleet "Ministry of Transport Transit"
 	names "telashki transport"
 	personality pacifist coward
 #	variant
-#		"Marlin"
+#		"Marlin (Ministry of Transport)"
 
 fleet "Small Telashki"
 	government "Telashki"
@@ -222,6 +245,7 @@ phrase "telashki transport"
 	word
 		"Ardent"
 		"Assiduous"
+		"Busy"
 		"Diligent"
 		"Dutiful"
 		"Industrious"
@@ -232,6 +256,8 @@ phrase "telashki transport"
 		"Arm"
 		"Hand"
 		"Hauler"
+		"Laborer"
+		"Worker"
 
 phrase "xochira"
 	word

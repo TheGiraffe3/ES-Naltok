@@ -17,9 +17,9 @@ ship "Mackerel"
 		"cost" 1320000
 		"shields" 1200
 		"hull" 3900
-		"hull repair rate" .6
-		"hull energy" .3
-		"hull heat" .3
+		"hull repair rate" .7
+		"hull energy" .35
+		"hull heat" .35
 		"required crew" 4
 		"bunks" 29
 		"mass" 384
@@ -33,7 +33,7 @@ ship "Mackerel"
 		"heat capacity" 640
 		"high shield permeability" .4
 		"low shield permeability" .4
-		"cooling inefficiency" 5
+		"cooling inefficiency" 8
 		weapon
 			"blast radius" 20
 			"shield damage" 250
@@ -62,9 +62,9 @@ ship "Marlin"
 		"cost" 4330000
 		"shields" 3200
 		"hull" 13600
-		"hull repair rate" 1.3
-		"hull energy" .65
-		"hull heat" .65
+		"hull repair rate" 1.5
+		"hull energy" .75
+		"hull heat" .75
 		"required crew" 32
 		"bunks" 152
 		"mass" 1176
@@ -78,7 +78,7 @@ ship "Marlin"
 		"heat capacity" 1612
 		"high shield permeability" .4
 		"low shield permeability" .4
-		"cooling inefficiency" 5
+		"cooling inefficiency" 8
 		weapon
 			"blast radius" 64
 			"shield damage" 840
@@ -129,9 +129,9 @@ ship "Sturgeon"
 		"cost" 14172000
 		"shields" 5800
 		"hull" 35100
-		"hull repair rate" 3.5
-		"hull energy" 1.75
-		"hull heat" 1.75
+		"hull repair rate" 4.1
+		"hull energy" 2.05
+		"hull heat" 2.05
 		"required crew" 43
 		"bunks" 313
 		"mass" 2152
@@ -145,7 +145,7 @@ ship "Sturgeon"
 		"heat capacity" 2868
 		"high shield permeability" .4
 		"low shield permeability" .4
-		"cooling inefficiency" 5
+		"cooling inefficiency" 8
 		weapon
 			"blast radius" 154
 			"shield damage" 2040
@@ -154,8 +154,8 @@ ship "Sturgeon"
 	outfits
 		"Shell-Splitter Launcher"
 		"Shell-Splitter Torpedo" 11
-		"Steel-Render"
-		"Membrane-class Anti-Missile" 4
+		"Membrane-class Anti-Missile" 2
+		"Capsid-class Anti-Missile" 3
 
 		"River Reactor"
 		"Pond Battery"
@@ -167,9 +167,9 @@ ship "Sturgeon"
 		"Hyperdrive"
 
 	gun "Shell-Splitter Launcher"
-	turret "Steel-Render"
-	turret "Membrane-class Anti-Missile"
-	turret "Membrane-class Anti-Missile"
+	turret "Capsid-class Anti-Missile"
+	turret "Capsid-class Anti-Missile"
+	turret "Capsid-class Anti-Missile"
 	turret "Membrane-class Anti-Missile"
 	turret "Membrane-class Anti-Missile"
 	description `The Sturgeon is not designed to participate directly in ship to ship combat, although it is sufficiently resilient to ignore even fairly concentrated fire. Instead, it is a ground assault ship, designed to bring large numbers of troops and vehicles to the surface of a hostile planet.`
@@ -183,9 +183,9 @@ ship "Herring"
 		"cost" 462000
 		"shields" 500
 		"hull" 1800
-		"hull repair rate" .3
-		"hull energy" .15
-		"hull heat" .15
+		"hull repair rate" .35
+		"hull energy" .175
+		"hull heat" .175
 		"required crew" 2
 		"bunks" 3
 		"mass" 176
@@ -199,7 +199,7 @@ ship "Herring"
 		"heat capacity" 300
 		"high shield permeability" .4
 		"low shield permeability" .4
-		"cooling inefficiency" 5
+		"cooling inefficiency" 8
 		weapon
 			"blast radius" 8
 			"shield damage" 110
@@ -229,7 +229,7 @@ ship "Herring" "Herring (Mining)"
 		`"Anole" Ion Steering`
 		"Hyperdrive"
 
-ship "Herring" "Herring (No cargo)"
+ship "Herring" "Herring (No Cargo)"
 	sprite "ship/naltok herring b"
 	add attributes
 		mass -32
@@ -245,9 +245,9 @@ ship "Conger"
 		"cost" 2486000
 		"shields" 1100
 		"hull" 5900
-		"hull repair rate" .7
-		"hull energy" .35
-		"hull heat" .35
+		"hull repair rate" .8
+		"hull energy" .4
+		"hull heat" .4
 		"required crew" 4
 		"bunks" 5
 		"mass" 552
@@ -261,7 +261,7 @@ ship "Conger"
 		"heat capacity" 816
 		"high shield permeability" .4
 		"low shield permeability" .4
-		"cooling inefficiency" 5
+		"cooling inefficiency" 8
 		weapon
 			"blast radius" 28
 			"shield damage" 350
@@ -276,9 +276,11 @@ ship "Conger"
 		`"Gecko" Ion Steering`
 		"Hyperdrive"
 
-	turret "Membrane-class Anti-Missile"
-	turret "Membrane-class Anti-Missile"
-	bay "Drone" 0 0
+	turret 0 -23 "Membrane-class Anti-Missile"
+	turret 0 2 "Membrane-class Anti-Missile"
+	bay "Drone" 0 -29 under
+	engine -17 64
+	engine 17 64
 	description `The Conger serves as the backbone of the Ministry of Transport's goods transit network. While the Herring and Flounder do see occasional use in specialized roles, more than 95% of the goods transported by the Ministry travel in a Conger.`
 	description `	Furthermore, the presence of a docking port for a drone makes the Conger an excellent base for a Minnow, making the Conger an ideal vessel for the asteroid-mining fleets employed by the Ministry of Minerals.`
 
@@ -313,37 +315,35 @@ ship "Flounder"
 		"cost" 7731000
 		"shields" 2300
 		"hull" 18200
-		"hull repair rate" 1.45
-		"hull energy" .725
-		"hull heat" .725
+		"hull repair rate" 1.6
+		"hull energy" .8
+		"hull heat" .8
 		"required crew" 12
 		"bunks" 17
-		"mass" 2176
+		"mass" 2048
 		"drag" 20.5
-		"heat dissipation" .034
+		"heat dissipation" .037
 		"fuel capacity" 600
 		"cargo space" 864
-		"outfit space" 512
-		"weapon capacity" 174
-		"engine capacity" 114
+		"outfit space" 384
+		"weapon capacity" 112
+		"engine capacity" 112
 		"heat capacity" 2688
 		"high shield permeability" .4
 		"low shield permeability" .4
-		"cooling inefficiency" 5
+		"cooling inefficiency" 8
 		weapon
 			"blast radius" 72
 			"shield damage" 1020
 			"hull damage" 510
 			"hit force" 1530
 	outfits
-		"Membrane-class Anti-Missile" 2
+		"Membrane-class Anti-Missile" 4
 		"Capsid-class Anti-Missile"
-		"Triple Breaker Turret" 2
 
-		"Spring Cell" 6
-		"Pond Battery"
+		"Spring Cell" 4
 		"Lake Battery"
-		"Marsh Shield Generator" 2
+		"Marsh Shield Generator"
 
 		`"Iguana" Ion Steering`
 		`"Gecko" Ion Thruster`
@@ -361,21 +361,23 @@ ship "Flounder"
 
 ship "Grouper"
 	sprite "ship/naltok grouper"
-	thumbnail "ship/naltok grouper"
+	thumbnail "thumbnail/naltok grouper"
 	attributes
 		category "Utility"
+		licenses 
+			"Xochira"
 		"cost" 8400000
-		"shields" 4900
-		"hull" 19000
-		"hull repair rate" 2.45
-		"hull energy" 1.225
-		"hull heat" 1.225
+		"shields" 5100
+		"hull" 19600
+		"hull repair rate" 2.8
+		"hull energy" 1.4
+		"hull heat" 1.4
 		"required crew" 15 
-		"bunks" 27
+		"bunks" 24
 		"mass" 1808
 		"drag" 15.2
 		"heat dissipation" .06
-		"fuel capacity" 4000
+		"fuel capacity" 4800
 		"cargo space" 64
 		"outfit space" 584
 		"weapon capacity" 136
@@ -383,7 +385,7 @@ ship "Grouper"
 		"heat capacity" 2392
 		"high shield permeability" .4
 		"low shield permeability" .4
-		"cooling inefficiency" 5
+		"cooling inefficiency" 8
 		weapon
 			"blast radius" 169
 			"shield damage" 2390
@@ -403,15 +405,15 @@ ship "Grouper"
 		`"Iguana" Ion Thruster`
 		`"Gecko" Ion Thruster`
 		"Hyperdrive"
-	gun 0 0
-	gun 0 0
-		angle -60
-	gun 0 0
-		angle 60
-	turret 0 0
-	turret 0 0
-	bay "Drone" 0 0
-	bay "Drone" 0 0
+	gun 0 -158
+	gun -65 76
+		angle -120
+	gun 65 76
+		angle 120
+	turret 0 -45
+	turret 0 30
+	engine 37 106
+	engine -37 106
 	description `As part of their plans to root out the Alphas from the nearby regions of Human space to prevent future incursions, the Xochira designed the Grouper as a support vessel able to continually refuel their warships during long journeys.`
 
 ship "Guppy"
@@ -423,9 +425,9 @@ ship "Guppy"
 		"cost" 381000
 		"shields" 1300
 		"hull" 4000
-		"hull repair rate" 0.95
-		"hull energy" .475
-		"hull heat" .475
+		"hull repair rate" 1.05
+		"hull energy" .525
+		"hull heat" .525
 		"required crew" 1
 		"bunks" 3
 		"mass" 144
@@ -439,7 +441,7 @@ ship "Guppy"
 		"heat capacity" 328
 		"high shield permeability" .4
 		"low shield permeability" .4
-		"cooling inefficiency" 5
+		"cooling inefficiency" 8
 		weapon
 			"blast radius" 17
 			"shield damage" 230
@@ -470,23 +472,23 @@ ship "Tetra"
 		"cost" 837000
 		"shields" 1600
 		"hull" 4800
-		"hull repair rate" 1.2
-		"hull energy" .6
-		"hull heat" .6
+		"hull repair rate" 1.4
+		"hull energy" .7
+		"hull heat" .7
 		"required crew" 1
 		"bunks" 2
 		"mass" 232
 		"drag" 1.95
 		"heat dissipation" .16
 		"fuel capacity" 400
-		"cargo space" 6
+		"cargo space" 8
 		"outfit space" 204
 		"weapon capacity" 56
 		"engine capacity" 76
 		"heat capacity" 440
 		"high shield permeability" .4
 		"low shield permeability" .4
-		"cooling inefficiency" 5
+		"cooling inefficiency" 8
 		weapon
 			"blast radius" 21
 			"shield damage" 270
@@ -531,23 +533,23 @@ ship "Archerfish"
 		"cost" 1896000
 		"shields" 2500
 		"hull" 8200
-		"hull repair rate" 1.3
-		"hull energy" .65
-		"hull heat" .65
+		"hull repair rate" 1.5
+		"hull energy" .75
+		"hull heat" .75
 		"required crew" 3
 		"bunks" 5
 		"mass" 272
 		"drag" 2.6
 		"heat dissipation" .16
 		"fuel capacity" 300
-		"cargo space" 8
+		"cargo space" 12
 		"outfit space" 320
 		"weapon capacity" 82
 		"engine capacity" 92
 		"heat capacity" 592
 		"high shield permeability" .4
 		"low shield permeability" .4
-		"cooling inefficiency" 5
+		"cooling inefficiency" 8
 		weapon
 			"blast radius" 42
 			"shield damage" 540
@@ -561,13 +563,14 @@ ship "Archerfish"
 		"Ripper Pistols" 3
 		"Shredder Minigun" 2
 		
-		`"Gecko" Ion Steering`
-		`"Gecko" Ion Thruster`
-		`"Agama" Ion Thruster`
+		`"Anole" Ion Steering`
+		`"Iguana" Ion Thruster`
 		"Hyperdrive"
 
-	gun "Leech-Ray"
-	gun "Leech-Ray"
+	gun -24 -74 "Leech-Ray"
+	gun 24 -74 "Leech-Ray"
+	engine -14 42
+	engine 14 42
 	description `Once the war between the Xochira and the Telashki reached the current stalemate, the Xochira found themselves occupying the systems that the Alphas originally arrived in. Their weapon designers quickly produced the Leech-Ray in an attempt to prevent any Alpha ships escaping to the Telashki, but no ships they produced at the time were fast enough to chase a potential opponent down without risking their escape.`
 	description `	Several designs were proposed, but ultimately the Xochira opted to begin constructing the Archerfish; a low-cost, high-speed light warship carrying two Leech-Rays. To date, the Xochira maintain that no Alpha warship has ever escaped the Archerfish long enough to escape to Telashki space.`
 
@@ -580,9 +583,9 @@ ship "Piranha"
 		"cost" 2344000
 		"shields" 3800
 		"hull" 11800
-		"hull repair rate" 1.9
-		"hull energy" .95
-		"hull heat" .95
+		"hull repair rate" 2.2
+		"hull energy" 1.1
+		"hull heat" 1.1
 		"required crew" 5
 		"bunks" 11
 		"mass" 656
@@ -596,7 +599,7 @@ ship "Piranha"
 		"heat capacity" 1040
 		"high shield permeability" .4
 		"low shield permeability" .4
-		"cooling inefficiency" 5
+		"cooling inefficiency" 8
 		weapon
 			"blast radius" 55
 			"shield damage" 700
@@ -717,9 +720,9 @@ ship "Bass"
 		"cost" 3848000
 		"shields" 4200
 		"hull" 11200
-		"hull repair rate" 2.1
-		"hull energy" 1.05
-		"hull heat" 1.05
+		"hull repair rate" 2.45
+		"hull energy" 1.225
+		"hull heat" 1.225
 		"required crew" 7
 		"bunks" 12
 		"mass" 472
@@ -733,7 +736,7 @@ ship "Bass"
 		"heat capacity" 868
 		"high shield permeability" .4
 		"low shield permeability" .4
-		"cooling inefficiency" 5
+		"cooling inefficiency" 8
 		weapon
 			"blast radius" 50
 			"shield damage" 640
@@ -768,10 +771,10 @@ ship "Barracuda"
 		category "Medium Warship"
 		"cost" 4742000
 		"shields" 5200
-		"hull" 16600
-		"hull repair rate" 2.7
-		"hull energy" 1.35
-		"hull heat" 1.35
+		"hull" 16800
+		"hull repair rate" 3.15
+		"hull energy" 1.575
+		"hull heat" 1.575
 		"required crew" 7
 		"bunks" 24
 		"mass" 800
@@ -785,7 +788,7 @@ ship "Barracuda"
 		"heat capacity" 1232
 		"high shield permeability" .4
 		"low shield permeability" .4
-		"cooling inefficiency" 5
+		"cooling inefficiency" 8
 		weapon
 			"blast radius" 68
 			"shield damage" 900
@@ -820,7 +823,7 @@ ship "Barracuda"
 		angle -90
 	gun "Shell-Splitter Launcher"
 		angle 90
-	description `The Barracuda is a highly mobile ship, intended to be able to evade the attacks and overwhelm the defenses of even far more powerful ships. More than half of the space is devoted to the rows of missile launchers that run along both sides of the ship, and almost all of the remainder is devoted to the engines.`
+	description `The Barracuda is a highly mobile ship, intended to be able to evade the attacks and overwhelm the defenses of even far more powerful ships. More than half of the internal space is devoted to the rows of missile launchers that run along both sides of the ship, and most of the remainder is used to house the engines.`
 
 ship "Albacore"
 	sprite "ship/naltok albacore"
@@ -830,25 +833,25 @@ ship "Albacore"
 		licenses 
 			"Xochira"
 		"cost" 4143000
-		"shields" 5400
-		"hull" 17800
-		"hull repair rate" 2.5
-		"hull energy" 1.25
-		"hull heat" 1.25
+		"shields" 5600
+		"hull" 18400
+		"hull repair rate" 2.9
+		"hull energy" 1.45
+		"hull heat" 1.45
 		"required crew" 12
 		"bunks" 18
 		"mass" 984
 		"drag" 9.3
 		"heat dissipation" .09
 		"fuel capacity" 700
-		"cargo space" 18
+		"cargo space" 24
 		"outfit space" 424
 		"weapon capacity" 112
 		"engine capacity" 132
 		"heat capacity" 1408
 		"high shield permeability" .4
 		"low shield permeability" .4
-		"cooling inefficiency" 5
+		"cooling inefficiency" 8
 		weapon
 			"blast radius" 72
 			"shield damage" 1020
@@ -871,18 +874,24 @@ ship "Albacore"
 		`"Wyrm" Afterburner`	
 		"Hyperdrive"
 
-	gun
-	gun
+	gun 0 -133
+	gun -28 -73
 		angle -30
-	gun
+	gun 28 -73
 		angle 30
-	turret
-	bay "Fighter" 0 0
-	bay "Fighter" 0 0
-	bay "Fighter" 0 0
-	bay "Fighter" 0 0
-	bay "Fighter" 0 0
-	bay "Fighter" 0 0
+	turret 0 -21
+	bay "Fighter" -122 -69 under
+		angle -72
+	bay "Fighter" 122 -69 under
+		angle 72
+	bay "Fighter" -73 -57 under
+	bay "Fighter" 73 -57 under
+	bay "Fighter" -68 14 under
+		angle -72
+	bay "Fighter" 68 14 under
+		angle 72
+	engine -28 38
+	engine 28 38
 	description `The Albacore is not intended to be involved in large fleet battles like the Kaluga, but instead to serve as a transporter and deployer for five Lamprey fighters, patrolling the systems previously covered by the Archerfish. Despite this, the Albacore is not completely unarmed, carrying a small armament intended for long-range support, bringing some additional firepower to bear against ships trapped by the Lampreys.`
 
 ship "Moray"
@@ -891,11 +900,11 @@ ship "Moray"
 	attributes
 		category "Medium Warship"
 		"cost" 5163000
-		"shields" 6200
-		"hull" 21600
-		"hull repair rate" 3.2
-		"hull energy" 1.6
-		"hull heat" 1.6
+		"shields" 6400
+		"hull" 22400
+		"hull repair rate" 3.7
+		"hull energy" 1.85
+		"hull heat" 1.85
 		"required crew" 22
 		"bunks" 42
 		"mass" 1320
@@ -909,7 +918,7 @@ ship "Moray"
 		"heat capacity" 1856
 		"high shield permeability" .4
 		"low shield permeability" .4
-		"cooling inefficiency" 5
+		"cooling inefficiency" 8
 		weapon
 			"blast radius" 108
 			"shield damage" 1430
@@ -934,15 +943,45 @@ ship "Moray"
 		`"Gecko" Ion Thruster`
 		
 
-	gun "Strike-Needler Pod"
-	gun "Strike-Needler Pod"
-	gun "Shell-Splitter Launcher"
+	gun -31 -96 "Strike-Needler Pod"
+	gun 31 -96 "Strike-Needler Pod"
+	gun 0 -20 "Shell-Splitter Launcher"
 		angle 180
-	turret "Sky-Shredder"
-	turret "Sky-Shredder"
-	turret "Steel-Render"
-	turret "Steel-Render"
+	turret -55 -55 "Sky-Shredder"
+	turret 55 -55 "Sky-Shredder"
+	turret -64 -30 "Steel-Render"
+	turret 64 -30 "Steel-Render"
+	engine -19 13
+	engine 19 13
 	description `The Moray is a high-performance medium warship, with impressive armament and toughness for its size. Unfortunately, this combat power comes at the cost of fairly poor mobility - the Moray is one of the slowest ships the Naltok produce, though this disadvantage is lessened somewhat by the turret-heavy armament and single rear-facing missile launcher, both of which make the Moray less vulnerable to flanking attacks.`
+
+ship "Moray" "Moray (Halt-Swarm)"
+	outfits
+		"Hyperdrive"
+		"Sky-Shredder" 2
+		"Steel-Render" 2
+		"Halt-Swarm Launcher" 2
+		"Halt-Swarm Missile" 192
+		"Halt-Swarm Rack" 2
+
+		"Brook Cell"
+		"Stream Generator"
+		"Pond Battery"
+		"Swamp Shield Generator"
+
+		`"Gecko" Ion Steering`
+		`"Gecko" Ion Thruster`
+
+		"Ripper Pistols" 20
+		"Shredder Minigun" 12
+	gun "Halt-Swarm Launcher"
+	gun "Halt-Swarm Launcher"
+	gun
+	turret "Sky-Shredder"
+	turret "Sky-Shredder"
+	turret "Steel-Render"
+	turret "Steel-Render"
+
 
 ship "Pike"
 	sprite "ship/naltok pike"
@@ -952,9 +991,9 @@ ship "Pike"
 		"cost" 27678000
 		"shields" 7600
 		"hull" 37200
-		"hull repair rate" 3.8
-		"hull energy" 1.9
-		"hull heat" 1.9
+		"hull repair rate" 4.4
+		"hull energy" 2.2
+		"hull heat" 2.2
 		"required crew" 42
 		"bunks" 52
 		"mass" 2072
@@ -968,7 +1007,7 @@ ship "Pike"
 		"heat capacity" 2864
 		"high shield permeability" .4
 		"low shield permeability" .4
-		"cooling inefficiency" 5
+		"cooling inefficiency" 8
 		weapon
 			"blast radius" 193
 			"shield damage" 2630
@@ -1048,23 +1087,23 @@ ship "Mola"
 		"cost" 21236000
 		"shields" 7200
 		"hull" 36400
-		"hull repair rate" 3.3
-		"hull energy" 1.65
-		"hull heat" 1.65
+		"hull repair rate" 3.95
+		"hull energy" 1.975
+		"hull heat" 1.975
 		"required crew" 54
 		"bunks" 68
 		"mass" 3600
 		"drag" 28.1
 		"heat dissipation" .037
 		"fuel capacity" 400
-		"cargo space" 24
+		"cargo space" 32
 		"outfit space" 752
 		"weapon capacity" 72
 		"engine capacity" 196
 		"heat capacity" 4352
 		"high shield permeability" .4
 		"low shield permeability" .4
-		"cooling inefficiency" 5
+		"cooling inefficiency" 8
 		weapon
 			"blast radius" 178
 			"shield damage" 2280
@@ -1122,23 +1161,23 @@ ship "Kaluga"
 		"cost" 33723000
 		"shields" 10400
 		"hull" 54600
-		"hull repair rate" 4.7
-		"hull energy" 2.35
-		"hull heat" 2.35
+		"hull repair rate" 5.5
+		"hull energy" 2.75
+		"hull heat" 2.75
 		"required crew" 72
 		"bunks" 80
 		"mass" 4136
 		"drag" 28.1
 		"heat dissipation" .036
 		"fuel capacity" 400
-		"cargo space" 0
+		"cargo space" 16
 		"outfit space" 936
 		"weapon capacity" 448
 		"engine capacity" 178
 		"heat capacity" 5072
 		"high shield permeability" .4
 		"low shield permeability" .4
-		"cooling inefficiency" 5
+		"cooling inefficiency" 8
 		weapon
 			"blast radius" 242
 			"shield damage" 3120
@@ -1161,23 +1200,25 @@ ship "Kaluga"
 		`"Gecko" Ion Steering`
 		"Hyperdrive"
 
-	gun
-	gun
-	gun
+	gun -16 -207
+	gun 16 -207
+	gun -55 -133
 		angle -30
-	gun
+	gun 55 -133
 		angle 30
-	gun
+	gun -93 -82
 		angle -45
-	gun
+	gun 93 -82
 		angle 45
-	turret
-	turret
-	turret
-	turret
-	turret
-	turret
-	turret
+	turret 0 -71 "Sky-Shredder"
+	turret -86 -64 "Sky-Shredder"
+	turret 86 -64 "Sky-Shredder"
+	turret 0 4 "Capsid-class Anti-Missile"
+	turret -151 16 "Sky-Shredder"
+	turret 151 16 "Sky-Shredder"
+	turret 0 80 "Capsid-class Anti-Missile"
+	engine -63 126
+	engine 63 126
 	description `The Kaluga is the Grand Admiral's trump card, a colossal warship able to do battle with whole fleets. Small ships are immobilized by a barrage of halt-swarm missiles, while even the largest potential opponents in Naltok space cannot compete with the Kaluga's toughness or its close-range firepower.`
 
 ship "Lamprey"
@@ -1190,9 +1231,9 @@ ship "Lamprey"
 		"cost" 317800
 		"shields" 400
 		"hull" 2100
-		"hull repair rate" .45
-		"hull energy" .225
-		"hull heat" .225
+		"hull repair rate" .55
+		"hull energy" .275
+		"hull heat" .275
 		"required crew" 1
 		"bunks" 1
 		"mass" 48
@@ -1204,7 +1245,7 @@ ship "Lamprey"
 		"heat capacity" 144
 		"high shield permeability" .4
 		"low shield permeability" .4
-		"cooling inefficiency" 5
+		"cooling inefficiency" 8
 		weapon
 			"blast radius" 8
 			"shield damage" 120
@@ -1216,7 +1257,9 @@ ship "Lamprey"
 		"Puddle Battery"
 		`"Agama" Ion Steering`
 		`"Anole" Ion Thruster`
-	gun "Leech-Ray"
+	gun 0 -29 "Leech-Ray"
+	engine -9 15
+	engine 9 15
 	description `Inspired by the Telashki Remora, the Lamprey is the Xochira take on a small, fast carried ship. Extending the concept behind the Archerfish, the Lamprey's defining features are its excellent top speed and its armament consisting entirely of a single Leech-Ray. Though not a true spinal mount, the Leech-Ray is still responsible for more than a quarter of the craft's mass, and the oversized housing for it creates some challenges on the rare occasions that a Lamprey needs to land on a planet.`
 	description `	Fighters do not come equipped with a hyperdrive. You cannot carry a fighter unless you have a ship in your fleet with a fighter bay.`
 
@@ -1229,9 +1272,9 @@ ship "Remora"
 		"cost" 201000
 		"shields" 800
 		"hull" 2600
-		"hull repair rate" .7
-		"hull energy" .35
-		"hull heat" .35
+		"hull repair rate" .85
+		"hull energy" .425
+		"hull heat" .425
 		"required crew" 1
 		"bunks" 1
 		"mass" 72
@@ -1243,7 +1286,7 @@ ship "Remora"
 		"heat capacity" 184
 		"high shield permeability" .4
 		"low shield permeability" .4
-		"cooling inefficiency" 5
+		"cooling inefficiency" 8
 		weapon
 			"blast radius" 12
 			"shield damage" 170
@@ -1273,9 +1316,9 @@ ship "Minnow"
 		category "Drone"
 		"cost" 128000
 		"hull" 1200
-		"hull repair rate" .25
-		"hull energy" .125
-		"hull heat" .125
+		"hull repair rate" .3
+		"hull energy" .15
+		"hull heat" .15
 		"automaton" 1
 		"mass" 40
 		"drag" .57
@@ -1287,7 +1330,7 @@ ship "Minnow"
 		"heat capacity" 100
 		"high shield permeability" .4
 		"low shield permeability" .4
-		"cooling inefficiency" 5
+		"cooling inefficiency" 8
 		weapon
 			"blast radius" 4
 			"shield damage" 60
